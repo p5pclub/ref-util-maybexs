@@ -8,6 +8,8 @@ use Carp         ();
 use Scalar::Util ();
 use Exporter 5.57 'import';
 
+our @EXPORT      = ();
+our @EXPORT_OK   = ();
 our %EXPORT_TAGS = ( 'all' => [qw<
     is_ref
     is_scalarref
