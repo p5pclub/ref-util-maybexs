@@ -155,7 +155,7 @@ sub is_plain_refref($) {
 # -- is_blessed_*
 # ----
 
-sub is_blessed_ref($) { ref $_[0] && defined Scalar::Util::blessed( $_[0] ) }
+sub is_blessed_ref($) { defined Scalar::Util::blessed( $_[0] ) }
 
 sub is_blessed_scalarref($) {
     no warnings 'uninitialized';
