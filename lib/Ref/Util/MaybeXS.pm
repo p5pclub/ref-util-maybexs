@@ -78,7 +78,7 @@ sub is_globref($) {
 }
 
 sub is_formatref($) {
-    !$^V || $^V lt v5.7.0
+    "$]" < 5.007
         and
         Carp::croak("is_formatref() isn't available on Perl 5.6.x and under");
 
@@ -133,7 +133,7 @@ sub is_plain_globref($) {
 }
 
 sub is_plain_formatref($) {
-    !$^V || $^V lt v5.7.0
+    "$]" < 5.007
         and
         Carp::croak("is_formatref() isn't available on Perl 5.6.x and under");
 
@@ -185,7 +185,7 @@ sub is_blessed_globref($) {
 }
 
 sub is_blessed_formatref($) {
-    !$^V || $^V lt v5.7.0
+    "$]" < 5.007
         and
         Carp::croak("is_formatref() isn't available on Perl 5.6.x and under");
 
